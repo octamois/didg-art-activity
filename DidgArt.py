@@ -145,7 +145,7 @@ class DidgArt:
         g.carry_shape=didg.shapes[0]; self.didg.make_carry()
         load_save.retrieve()
         self.buttons_setup()
-        if self.canvas<>None: self.canvas.grab_focus()
+        if self.canvas!=None: self.canvas.grab_focus()
         ctrl=False
         pygame.key.set_repeat(600,120); key_ms=pygame.time.get_ticks()
         need_carry=False
@@ -163,7 +163,7 @@ class DidgArt:
                 elif event.type == pygame.MOUSEMOTION:
                     g.pos=event.pos
                     need_carry=True
-                    if self.canvas<>None: self.canvas.grab_focus()
+                    if self.canvas!=None: self.canvas.grab_focus()
                 elif event.type == pygame.MOUSEBUTTONDOWN:
                     g.redraw=True
                     if event.button==1:
